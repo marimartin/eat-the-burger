@@ -1,11 +1,11 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
-    $(".change-devoured").on("click", function (event) {
+    $(".change-devour").on("click", function (event) {
         var id = $(this).data("id");
         var newDevour = $(this).data("newdevour");
 
         var newDevourState = {
-            devoured: newDevour
+            devoured: true
         };
 
         // Send the PUT request.
