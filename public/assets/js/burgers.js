@@ -25,6 +25,11 @@ $(function () {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
+        if (!$("#ca").val().trim()) {
+            $(".form-group:first-of-type").append("<p>Please enter a burger name</p>");
+            return
+        };
+
         var newBurger = {
             name: $("#ca").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()
