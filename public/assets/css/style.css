@@ -5,6 +5,10 @@
   width: 200px;
 }
 
+#burgerImage {
+  padding-top: 30px;
+}
+
 h1 {
   text-align: center;
   font-family: 'Sigmar One', cursive;
@@ -17,6 +21,7 @@ body {
 .burgerInfo {
   padding: 10px;
 }
+
 .inputInfo {
   margin: auto;
   width: 50%;

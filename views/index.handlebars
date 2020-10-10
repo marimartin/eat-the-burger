@@ -1,5 +1,5 @@
 <img src="https://lh3.googleusercontent.com/proxy/YiQKyqQHQHvXcr_qwIhdeKcsJQpflj6W-J3DmIF9n3FwahhgSuMNfGtMlNLqpkparPAGWEFXZx6zf1ZEphGflKggW8Xkz6RWmRKXfvNd3Tw8oGJEauZR0UUhFjSdpmPDa9s0T6uiQlDhx9P1Zw"
-    alt="Burger" class="center">
+    alt="Burger" class="center" id="burgerImage">
 
 <h1>Eat-Da-Burger</h1>
 
@@ -7,25 +7,25 @@
     <div class="row burgerInfo">
         <div class="toEat col-6">
             <h2>Burgers to Eat!</h2>
-            <ul>
+            <p>
                 {{#each burgers}}
                 {{#unless this.devoured}}
                 {{> burgers/burger-block devour=true}}
                 {{/unless}}
                 {{/each}}
-            </ul>
+            </p>
         </div>
 
         <div class="devoured col-6">
             <h2>Burgers that have been devoured!</h2>
 
-            <ul>
+            <p>
                 {{#each burgers}}
                 {{#if this.devoured}}
                 {{> burgers/burger-block devour=false}}
                 {{/if}}
                 {{/each}}
-            </ul>
+            </p>
         </div>
     </div>
 
@@ -40,7 +40,6 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="radio" name="devoured" value="1" checked> Already Devoured!<br>
                     <input type="radio" name="devoured" value="0"> Make New Burger
                 </div>
 
